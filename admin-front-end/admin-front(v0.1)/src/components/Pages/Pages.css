@@ -1,0 +1,46 @@
+.class-register{
+    padding: 10px;
+}
+.option-select a{
+    color: black;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.option-select {
+    margin-bottom: 30px;
+}
+.class-register{
+    border: 1px solid #ccc;
+}
+.form-class-register th, td{
+    border: none;
+    font-size: 20px;
+    padding: 20px;
+}
+.form-control{
+    width: 250px;
+    display: inline;
+    margin-left: 20px;
+}
+label{
+    font-weight: normal;
+    font-size: 20px;
+}
+.col-sm-6{
+    text-align: center;
+}
+#ta.form-control{
+    margin-left: 67px;
+}
+#date.form-control{
+    width: 155px;
+    margin: 0;
+}
+label.timeText{
+    text-align: left;
+    padding-right: 90px;
+}
+*[role="form"] h2{
+    text-align: center;
+}
