@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CKEditor from 'ckeditor4-react';
+var displayCheck;
+var width;
 class CreateHomework extends Component {
     constructor(props) {
         super(props);
@@ -11,11 +13,6 @@ class CreateHomework extends Component {
         this.setState({
             display : !this.state.display
         });
-    }
-  render(){ 
-    var displayCheck;
-    var width;
-    var check = () => {
         if (this.state.display) {
             width = {width : '50%'}
             displayCheck = { display : 'block'}
@@ -24,10 +21,10 @@ class CreateHomework extends Component {
             width = {width : '100%'}
         }
     }
+  render(){ 
     return(
     <>
         <div className = "create-hw">
-            {check()}
             <div class="row"> 
                 <div className = "hw-name">
                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">

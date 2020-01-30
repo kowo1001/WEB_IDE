@@ -12,6 +12,7 @@ import ListRegister from '../../../components/_Admin_components/_adm_ListRegiste
 import ListMyClass from '../../../components/ListMyClass';
 import ClassTasks from '../../../components/_Admin_components/_adm_ClassTask';
 import ClassInfor from '../../../components/ClassInfor';
+import ClassNotice from '../../../components/_Admin_components/_adm_ClassNotice';
 class Class extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,9 @@ class Class extends Component {
     slug += page;
     var contentRight = () =>{
       switch (slug) {
+        case "notice":
+          return <ClassNotice />
+        case "homework":
         case "student":
           return <ListRegister />
         case "homework":

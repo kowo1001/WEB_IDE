@@ -4,7 +4,10 @@ import {
   Route,
 } from "react-router-dom";
 // Main page
-import ProblemBank from '../pages/ProblemsBank';
+// import Login from '../pages/Login';
+// import RegisterForm from '../containers/author/RegisterForm';
+import Index from '../pages/Index'
+import ProblemBank from '../pages/_Admin/ProblemsBack/ProblemsBank';
 import ProjectManager from '../pages/ProjectManager';
 import Template from '../pages/Template';
 // Admin page
@@ -15,12 +18,21 @@ import Class from '../pages/_Admin/_Class/Class';
 import HomeStudent from '../pages/_Student/Home/Home'
 import ClassRegister from '../pages/_Student/Home/ClassRegister';
 import ClassStudent from '../pages/_Student/_Class/Class';
-
+import ProblemDetails from '../pages/_Admin/ProblemsBack/ProblemDetails';
+import Header from '../components/Header/Header';
 class Routes extends React.Component {
     render() {
       return (    
         <>
+            {/* <Header/> */}
+            <Route exact path = "/" component = {Index} />
+            <Route exact path = "/:slug" component = {Index} />
+             {/* <Route exact path = "/login" component = {Login} /> */}
+             {/* <Route exact path = "/register" component = {RegisterForm} /> */}
+
             <Route exact path = "/listproblem" component = {ProblemBank} />
+            <Route exact path = "/listproblem/:num" component = {ProblemDetails} />
+            
             <Route exact path = "/projectmanager" component = {ProjectManager} />
             <Route exact path = "/template" component = {Template} />
 
@@ -42,9 +54,7 @@ class Routes extends React.Component {
 
             <Route exact path = "/student/class" component = {ClassStudent} /> 
             <Route exact path = "/student/class/:slug" component = {ClassStudent} /> 
-            <Route exact path = "/student/class/:slug/:page" component = {ClassStudent} />
-
-           
+         
       </>  
       )
     }

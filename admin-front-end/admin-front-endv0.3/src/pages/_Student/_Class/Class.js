@@ -17,6 +17,7 @@ import ClassTasks from '../../../components/_Student_components/_std_ClassTask';
 import Community from '../../../components/_Student_components/_std_Community';
 import ListRegister from '../../../components/_Student_components/_std_ListRegister';
 import ListHomework from '../../../components/_Student_components/_std_ListHomework';
+import ClassNotice from '../../../components/_Student_components/_std_ClassNotice';
 class ClassStudent extends Component {
   constructor(props){
     super(props);
@@ -27,6 +28,8 @@ class ClassStudent extends Component {
     slug += page;
     var contentRight = () =>{ 
           switch (slug) {
+          case "notice":
+            return <ClassNotice />
           case "liststudent":
             return <ListRegister />
           case "homework":

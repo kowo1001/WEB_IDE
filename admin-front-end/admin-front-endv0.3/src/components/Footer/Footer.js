@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 class Footer extends Component {
   render(){ 
     return( 
-      <div className = "footer container text-center">          
-          I am footer  
+      <div className = "footer text-center">          
+        Copyright(c) 2018 DONGGUK UNIVERSITY. ALL RIGHTS RESERVED.
       </div>
     )
   };
