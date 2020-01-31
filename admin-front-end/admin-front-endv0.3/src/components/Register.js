@@ -18,15 +18,21 @@ export default class Register extends Component {
                                    </td>
                                 </tr>
                                 <tr>
+                                   <td>비밀번호</td>
+                                   <td>
+                                    <input type="password" name="pwd" id="input" class="form-control" />                                  
+                                   </td>
+                               </tr>
+                                <tr>
                                    <td>이름</td>
                                    <td>
                                     <input type="text" name="major" id="input" class="form-control" />
                                    </td>
                                </tr>
-                                <tr>
-                                   <td>비밀번호</td>
+                               <tr>
+                                   <td>학번</td>
                                    <td>
-                                    <input type="password" name="pwd" id="input" class="form-control" />                                  
+                                    <input type="text" name="major" id="input" class="form-control" />
                                    </td>
                                </tr>
                                <tr>
