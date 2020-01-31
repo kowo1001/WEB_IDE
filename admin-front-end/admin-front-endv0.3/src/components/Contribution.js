@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class Contripution extends Component {
+export default class Contribution extends Component {
     render() {
         return (
-            <div className = "contripution">
-                <table className="table table-bordered list-contripution">
+            <div className = "contribution">
+                <table className="table table-bordered list-contribution">
                 <thead>
                     <tr>
                         <th>프로젝트 기간</th>

@@ -334,7 +334,7 @@ textarea.form-control{
 .login-form{
     margin: 0 auto;
     width: 500px;
-    height: 600px;
+    height: 650px;
     -webkit-box-shadow: 6px 6px 25px -2px rgba(0,0,0,0.88);
     -moz-box-shadow: 6px 6px 25px -2px rgba(0,0,0,0.88);
     box-shadow: 6px 6px 25px -2px rgba(0,0,0,0.88);
@@ -493,19 +493,19 @@ input.input100 {
     display: flex;
     padding-left: 10px;
 }
-.index-contripution{
+.index-contribution{
     color: white;
     background-color: black;
     font-size: 20px;
     padding: 15px;
 }
-.contripution{
+.contribution{
     background-color: white;
     color: black;
     padding: 10px;
     font-size: 10pt;
 }
-table.list-contripution th {
+table.list-contribution th {
     border-left: 1px #000 solid;
     border-right: 1px #000 solid;
     border-bottom: 1px #CFCFCF solid;

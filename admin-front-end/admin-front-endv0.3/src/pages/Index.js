@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Login from '../components/Login'
 import Register from '../components/Register'
-import Contripution from '../components/Contripution'
+import Contribution from '../components/Contribution'
 
 export default class Index extends Component {
     defaultRight = () =>{
@@ -16,8 +16,8 @@ export default class Index extends Component {
     menuRightComponents = () => {
         var slug = this.props.match.params.slug;
         switch (slug) {
-            case "contripution":
-                return <Contripution />;
+            case "contribution":
+                return <Contribution />;
             case "login":
                 return <Login />;
             case "register":
@@ -57,8 +57,8 @@ export default class Index extends Component {
                                 <h3>DGU IDE는 설치가 필요없는 클라우드 통합 개발환경으로<br/>팀의 개발 효율성을 극대화하는데 도움을 줍니다.</h3>
                             </div>
                         </div><br/>
-                        <div className = "btn-contripution pull-left">
-                            <Link to = "/contripution" className = "index-contripution">CONTRIBUTION</Link>
+                        <div className = "btn-contribution pull-left">
+                            <Link to = "/contribution" className = "index-contribution">CONTRIBUTION</Link>
                         </div>
                     </div>
                     <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
