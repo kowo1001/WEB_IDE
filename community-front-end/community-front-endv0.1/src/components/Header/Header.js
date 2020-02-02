@@ -58,9 +58,9 @@ class Header extends React.Component {
             <div className = "header-bottom">
                 <ul className = "menu text-center">
                     <li><Link to="/template">템플릿</Link></li>
-                    <li><Link to="/listproblem">문제 리스트</Link></li>
+                    <li><Link to="/listproblem/list">문제 리스트</Link></li>
                     <li><Link to="/projectmanager">프로젝트 관리</Link></li>
-                    <li><Link to="/admin">마이페이지</Link></li>
+                    <li><Link to="/student/mypage">마이페이지</Link></li>
                 </ul>
             </div>
       </div>

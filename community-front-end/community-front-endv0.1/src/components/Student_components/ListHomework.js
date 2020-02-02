@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Homework from './_std_Homework';
+import Homework from './Homework';
 
 class ListHomework extends Component {
   render(){ 

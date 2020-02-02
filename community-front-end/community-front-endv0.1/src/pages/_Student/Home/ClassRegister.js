@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import OptionSelect from '../../../components/_Student_components/_std_HomeOption';
+import OptionSelect from '../../../components/Student_components/HomeOption';
 import Profile from '../../../components/Profile/Profile';
 import TableCol9 from '../../../components/Table/Table-col-9';
+import Header from '../../../components/Header/Header';
 
 class ClassRegister extends Component {
     render(){ 
@@ -112,6 +113,7 @@ class ClassRegister extends Component {
   
       return(
         <>
+        <Header />
         <Profile />
             <div className = "home-page container">
                 <div className = "content-top">
