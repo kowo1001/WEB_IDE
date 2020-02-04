@@ -10,55 +10,31 @@ import {
 class Homework extends Component {
   render(){ 
     return(
-       <div className = "homwork">
-           <div className = "hw-top">
-                <div className="row">
-                <Table responsive className = "homework-table">
-                    <tbody>
-                        <tr>
-                            <td> 
-                                <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    <h4><b>[일반과제] 3주차 심화프로그래밍실습과제</b></h4>
-                                </div>     
-                                <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 class-talks">
-                                    <ButtonGroup className="pull-right">
-                                        <button className = "btn btn-primary"><Link to="/class/listclass">수정</Link></button>
-                                        <button className = "btn btn-primary"> <Link to="/class/evaluation">삭제</Link></button>
-                                       <button className = "btn btn-primary"> <Link to="/admin/class/homework/evalution">평가</Link></button>
-                                    </ButtonGroup>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> 
-                                <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                    제출기간 : <b> 2020.1.20 ~ 2020.02.3.03 </b>
-                                </div>     
-                                <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    Something
-                                </div>  
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> 
-                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    이번 과제는 클래스를 구현하는 프로그램입니다.<br/>
-                                    문의 : hoggiltog@dongguk.edu
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    첨부 파일 : &nbsp;
-                                    <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
-                                </div>
-                            </td> 
-                        </tr>
-                    </tbody>
-                </Table>
+       <div className = "homework">
+            <div className = "homework_title">
+                <div className = "title">
+                    <b>[일반과제] 개밸연구 보고서 [진행]</b>
                 </div>
-            </div>      
+                <div className = "tasks">
+                    <ul className = "ul-nolist-inline">
+                        <li><Link className = "btn__primary">수정</Link></li>
+                        <li><Link className = "btn__primary">삭제</Link></li>
+                        <li><Link className = "btn__primary">평가</Link></li>
+                    </ul>
+                </div>
+            </div>
+            <div className = "homework_file">
+                <span>제출기간 : </span>
+                <b>2020.1.20 ~ 2020.03.02</b>
+            </div>
+            <div className = "homework_content">
+                이번 과제는 클래스를 구현하는 프로그램입니다.<br/>
+                문의 : hoggiltog@dongguk.edu
+            </div>
+            <div className = "homework_file">
+                <b>첨부 파일 : </b>
+                <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
+            </div>
         </div>
     )
   };

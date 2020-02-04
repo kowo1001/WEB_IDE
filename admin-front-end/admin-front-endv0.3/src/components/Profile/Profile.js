@@ -8,34 +8,27 @@ import {
 class Profile extends React.Component {
     render() {
       return (
-        <div className = "profile container">
+        <div className = "profile">
             <div className = "row">
-                    <Col xs xl lg sm md="4">
-                        <div className = "avatar text-center">
-                            <img
-                                width = {100}
-                                height = {100}
-                                src="https://image.flaticon.com/icons/png/512/236/236832.png"
-                                alt="Dongguk logo"
-                            />
-                        </div>
-                    </Col>
-                    <Col xs xl lg sm md="5">
-                        <div className = "main-information">
-                            <ul>
-                                <li><p><b>이름 :</b> 홍길동</p></li>
-                                <li><p><b>학과 :</b> 컴퓨터 공학과</p></li>
-                                <li><p><b>학번 :</b> 201454526</p></li>
-                                <li><p><b>학년 :</b> 4</p></li>
-                                <li><p><b>이메일 :</b> kr@dongguk.du</p></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs xl lg sm md="3">
-                        <div className = "something">
-                             <p>Something</p> 
-                        </div>
-                    </Col>
+                <div className = "col span-1-of-2 profile_left">
+                    <img
+                        className = "profile_left-logo"
+                        src="https://nimael.com/wp-content/uploads/2017/07/student.png"
+                        alt="Dongguk logo"
+                    /> 
+                </div>
+                <div className = "col span-1-of-2 profile_right">
+                        <ul className = "ul-nolist-inline">
+                            <li><b>이름 :</b> 홍길동</li>
+                            <li><b>학과 :</b> 컴퓨터 공학과</li>
+                            <li><b>학번 :</b> 201454526</li>
+                            <li><b>학년 :</b> 4</li>
+                            <li><b>이메일 :</b> kr@dongguk.du</li>
+                        </ul>
+                        <div className = "profile_right_works">
+                            <button className = "btn btn__primary">수정</button>
+                        </div>  
+                </div>
             </div>
         </div>
       )

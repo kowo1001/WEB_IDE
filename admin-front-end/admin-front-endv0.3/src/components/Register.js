@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 export default class Register extends Component {
@@ -8,56 +7,50 @@ export default class Register extends Component {
             <div className = "login-form">
                 <form action="" method="POST" role="form">
                     <legend><h2>회원가입</h2></legend><br/>
-                    <div class="form-group">            
-                       <table class="table table-hover register-table"> 
+                    <div className="form-group">            
+                       <table className="register-table"> 
                            <tbody>
                                <tr>
                                    <td width = "20%">아이디</td>
                                    <td width = "80%">
-                                   <input type="text" name="id" id="input" class="form-control"/>
+                                   <input type="text" name="id" id="input" placeholder = "아이디" />
                                    </td>
                                 </tr>
                                 <tr>
-                                   <td>비밀번호</td>
+                                   <td>이름</td>
                                    <td>
-                                    <input type="password" name="pwd" id="input" class="form-control" />                                  
+                                    <input type="text" name="major" id="input" placeholder = "이름"  />
                                    </td>
                                </tr>
                                 <tr>
-                                   <td>이름</td>
+                                   <td>비밀번호</td>
                                    <td>
-                                    <input type="text" name="major" id="input" class="form-control" />
-                                   </td>
-                               </tr>
-                               <tr>
-                                   <td>학번</td>
-                                   <td>
-                                    <input type="text" name="major" id="input" class="form-control" />
+                                    <input type="password" name="pwd" id="input" placeholder = "비밀번호" />                                  
                                    </td>
                                </tr>
                                <tr>
                                    <td>이메일</td>
                                    <td>
                                     <div className = "email">
-                                        <input type="email" name="" id="input" class="form-control email-text" />
-                                        <select name="" id="index-email" class="form-control email-select">
-                                            <option value="">@gmail.com</option>
-                                            <option value="">@dongguk.edu</option>
-                                            <option value="">@naver.com</option>
-                                        </select>
+                                        <input type="email" name="" id="input" placeholder = "이메일"/>
+                                            <select name="" id="index-email">
+                                                <option value="">@gmail.com</option>
+                                                <option value="">@dongguk.edu</option>
+                                                <option value="">@naver.com</option>
+                                            </select>
                                     </div>
                                    </td>
                                </tr>
                                <tr>
                                    <td>전공</td>
                                    <td>
-                                    <input type="text" name="major" id="input" class="form-control" />
+                                    <input type="text" name="major" id="input" placeholder = "전공" />
                                    </td>
                                </tr>
                            </tbody>
                        </table>
                     </div><br/>
-                    <button type="submit" class="btn-login">회원가입</button>
+                    <button type="submit" className="btn-login">회원가입</button>
                 </form>
             </div>
         )
