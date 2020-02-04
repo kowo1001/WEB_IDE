@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../../components/Header/Header';
+import Button from '../../../components/Button';
+
 class ProblemBank extends Component {
   render(){ 
     return( 
@@ -17,7 +19,7 @@ class ProblemBank extends Component {
               <button type="submit"><i class="fa fa-search"></i></button>
               <Link className = "btn btn-primary pull-right" type="button" onClick = {()=> this.writeNotice()}>문제 작성</Link>
             </div>
-            <div className = "list-problem"><br/>
+            <div className = "list-problem, , body-height"><br/>
             <table class="table table-bordered table-hover">
                         <thead>
                             <tr>

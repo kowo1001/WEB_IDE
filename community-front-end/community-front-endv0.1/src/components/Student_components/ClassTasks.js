@@ -9,6 +9,9 @@ const ClassTasks = () => {
     return (
         <ListGroup>
             <ListGroup.Item className = "class-option">
+                <Link to="/student/class/notice">공지 사항</Link>
+            </ListGroup.Item>
+            <ListGroup.Item className = "class-option">
                 <Link to="/student/class">학습 목차</Link>
             </ListGroup.Item>
             <ListGroup.Item >

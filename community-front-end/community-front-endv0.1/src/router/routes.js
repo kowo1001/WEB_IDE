@@ -16,7 +16,6 @@ import HomeStudent from '../pages/_Student/Home/HomeStudent'
 import ClassRegister from '../pages/_Student/Home/ClassRegister';
 import ClassStudent from '../pages/_Student/_Class/Class';
 import ProblemDetails from '../pages/_Student/ProblemsBack/ProblemDetails';
-import Header from '../components/Header/Header';
 
 class Routes extends React.Component {
     render() {
@@ -31,7 +30,7 @@ class Routes extends React.Component {
             <Route exact path = "/listproblem/list" component = {ProblemBank} />
             <Route exact path = "/listproblem/list/:num" component = {ProblemDetails} />
             
-            <Route exact path = "/projectmanager" component = {ProjectManager} />
+            <Route exact path = "/projectmanager/myproject" component = {ProjectManager} />
             <Route exact path = "/template" component = {Template} />
 
           

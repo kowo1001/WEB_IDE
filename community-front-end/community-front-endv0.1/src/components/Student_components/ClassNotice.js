@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 var displayCheck;
@@ -31,7 +30,7 @@ export default class ClassNotice extends Component {
                         <option value="">제목</option>
                         <option value="">작성일</option>
                     </select>&nbsp;
-                    <input  id="search" type="text" placeholder="Search.."></input>
+                    <input  id="search" type="notice-text" placeholder="Search.."></input>
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </div><br/>
                 <table class="table table-bordered table-hover">

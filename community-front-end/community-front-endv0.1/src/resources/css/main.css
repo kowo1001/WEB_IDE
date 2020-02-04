@@ -169,7 +169,6 @@ label.timeText{
     padding-left: 10px;
 }
 .class-objects{
-    border: 1px solid #ccc;
     float: right;
     margin-right: 15px;
     padding: 0px;
@@ -187,7 +186,7 @@ label.timeText{
 }
 .class-talks button a{
     box-shadow: none;
-    font-size: 2em;
+    font-size: 1em;
     color: white;
 }
 .homwork{
@@ -264,6 +263,10 @@ button, input, select, textarea {
     border-bottom: 1px solid black;
     margin-bottom: 10px;
 }
+.notice-text{
+    height: 100px;
+    width: 50%;
+}
 .write-notice-content{
     border: 1px solid #ccc;
     padding: 5px;
@@ -305,7 +308,7 @@ textarea.form-control{
     height: 200px;
 }
 .index{
-    height: 93rem;
+    height: 142rem;
     background: rgb(44, 62, 80);
     color: white;
     padding: 150px;
@@ -465,21 +468,33 @@ input.input100 {
     transition: all 0.4s;
     border: none;
 }
+.btn-manager{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38%;
+    height: 60px;
+    background-color: rgb(211, 84, 0);
+    font-size: 19px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border: none;
+}
 .footer{
     padding: 30px 0px;
     background: #e9e9e9;
-    margin-top: 555px;
+    margin-top: 0px;
 }
 /* Regsiter-form */
-.register-table input[type="password"]
+.register-table input[type="password"],input[type="text"]
 {
     height: 50px;
     width: 90%;
-}
-.register-table input[type="text"]
-{
-    height: 50px;
-    width: 50%;
 }
 .register-table input[type="email"]{
     height: 50px;
@@ -517,4 +532,7 @@ table.list-contribution th {
     border-bottom: 1px #CFCFCF solid;
     color: black;
     background:#ccc;
+}
+.body-height{
+    height: 100vh;
 }

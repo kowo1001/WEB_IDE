@@ -70,7 +70,7 @@ class ListRegister extends Component {
             <>
                 <div className="student">
                         <div className = "paging_bottom_bar_2">
-                            <h3><b><FaRegListAlt/> &nbsp;수강생 완료 목록</b></h3>
+                            <h3><b><FaRegListAlt/> &nbsp;수강생 조회</b></h3>
                         </div>
                         <div className = "list-register">
                             <TableCol7 id="SuccessTable"

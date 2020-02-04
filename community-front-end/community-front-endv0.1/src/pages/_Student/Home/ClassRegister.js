@@ -120,18 +120,18 @@ class ClassRegister extends Component {
                     <OptionSelect/>
                 </div><br/>
                 <div className = "container">
-                    대학
-                    <select className ="custom-select">
+
+                    {/* <select className ="custom-select">
                         <option value="1">Boots</option>
                         <option value="2">Shoes</option>
                         <option value="3">Feet</option>
-                    </select>
-                    학과
-                    <select className="custom-select">
+                    </select> */}
+
+                    {/* <select className="custom-select">
                         <option value="1">Boots</option>
                         <option value="2">Shoes</option>
                         <option value="3">Feet</option>
-                    </select>
+                    </select> */}
                     <div>
                         <h3>수강신청 : 2020년 1학기</h3>
                             {myListRegisterClass()}

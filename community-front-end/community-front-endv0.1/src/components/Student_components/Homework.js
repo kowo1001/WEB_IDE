@@ -26,7 +26,7 @@ class Homework extends Component {
                      <tr>
                          <td> 
                              <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                 <h4><b>[일반과제] 3주차 심화프로그래밍실습과제</b></h4>
+                                 <h4><b>[일반과제] 1주차 심화프로그래밍실습과제</b></h4>
                              </div>     
                              <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 class-talks">
                                  <ButtonGroup className="pull-right">
@@ -41,7 +41,7 @@ class Homework extends Component {
                                  제출기간 : <b> 2020.1.20 ~ 2020.02.3.03 </b>
                              </div>     
                              <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                 Something
+                                 
                              </div>  
                          </td>
                      </tr>

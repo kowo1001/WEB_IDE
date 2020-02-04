@@ -2,10 +2,11 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser'; 
 import { 
         Pagination,
-        Button,
         Table,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Button from '../Button';
+
 class TableCol4 extends React.Component {
   viewClick(params) {
     // alert(JSON.stringify(params));
@@ -35,7 +36,7 @@ class TableCol4 extends React.Component {
                 <tr key = {index}>
                     { ReactHtmlParser(tdTags) }
                     <td>
-                        <Link to = {goHref} className = "btn btn-primary" onClick = {() => this.viewClick(item)}>이동가기</Link>
+                        <Button outline color="yellow" size="large"><Link to = {goHref}  onClick = {() => this.viewClick(item)}>이동하기</Link></Button>
                     </td>
                 </tr>
               )

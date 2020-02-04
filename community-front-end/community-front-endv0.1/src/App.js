@@ -11,6 +11,7 @@ import {
 import Footer from '../src/components/Footer/Footer'
 import Routes from './router/routes';
 //import Home from '../src/pages/_Admin/Home/Home';
+import  Button  from './components/Button';
 import {
   BrowserRouter as Router,
 } from "react-router-dom";

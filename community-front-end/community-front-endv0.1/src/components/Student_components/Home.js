@@ -14,7 +14,7 @@ import { Button,
 } from 'react-bootstrap';
 import TableCol4 from '../Table/Table-col-4';
 
-class HomeView extends Component {
+class Home extends Component {
   render(){ 
     var myRegisterClass = [
         {
@@ -81,7 +81,7 @@ class HomeView extends Component {
             title1 = "ID"
             title2 = "완료 날짜"
             title3 = "문제"
-            title4 = "IDE 가기"
+            title4 = "IDE 에디터"
             data = { myDoneProblem }
             >
             </TableCol4>
@@ -93,7 +93,7 @@ class HomeView extends Component {
             title1 = "ID"
             title2 = "미지작 날짜"
             title3 = "문제"
-            title4 = "IDE 가기"
+            title4 = "IDE 에디터"
             data = { myDoneProblem }
             >
             </TableCol4>
@@ -114,4 +114,4 @@ class HomeView extends Component {
     )
   };
 }
-export default HomeView;
+export default Home;

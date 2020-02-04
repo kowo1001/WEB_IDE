@@ -33,7 +33,7 @@ class Profile extends React.Component {
                     </Col>
                     <Col xs xl lg sm md="3">
                         <div className = "something">
-                             <p>Something</p> 
+                             <p></p> 
                         </div>
                     </Col>
             </div>

@@ -18,6 +18,8 @@ import Community from '../../../components/Student_components/Community';
 import ListRegister from '../../../components/Student_components/ListRegister';
 import ListHomework from '../../../components/Student_components/ListHomework';
 import ClassNotice from '../../../components/Student_components/ClassNotice';
+import Header from '../../../components/Header/Header';
+
 class ClassStudent extends Component {
   constructor(props){
     super(props);
@@ -39,9 +41,11 @@ class ClassStudent extends Component {
       }
     }
     return(
+      <>
+      <Header />
       <div className = "class-page container">
         <ClassInfor />
-        <div className="class-instance">
+        <div className="class-instance body-height">
             <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
                 <Row>
                     <Col sm={2}>
@@ -56,6 +60,7 @@ class ClassStudent extends Component {
             </Tab.Container>
         </div>
       </div>
+      </>
     )
   };
 }
