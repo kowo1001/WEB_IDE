@@ -5,7 +5,7 @@ export default class Contribution extends Component {
     render() {
         return (
             <div className = "contribution">
-                <table className="table table-bordered list-contribution">
+                <table border="1" className="table table-contribution">
                 <thead>
                     <tr>
                         <th>프로젝트 기간</th>

@@ -10,26 +10,32 @@ import CreateHomework from '../../_Admin/_Class/CreateHomework'
 import Community from '../../../components/_Admin_components/_adm_Community';
 import ListRegister from '../../../components/_Admin_components/_adm_ListRegister';
 import ListMyClass from '../../../components/ListMyClass';
-import ClassTasks from '../../../components/_Admin_components/_adm_ClassTask';
-import ClassInfor from '../../../components/ClassInfor';
-import ClassNotice from '../../../components/_Admin_components/_adm_ClassNotice';
+import ClassTasks from '../../../components/ClassTask';
+import ClassInfor from '../../../layout/Class/ClassInfor';
+import ClassBoard from '../../../components/_Admin_components/ClassBoard';
 class Class extends Component {
   constructor(props) {
     super(props);
   }
+  courseName = () => {
+    var courseName = this.props.location.search;
+    courseName = courseName.substring(3,courseName.length);
+  }
+  LayoutBottomRight = () => {
+
+  }
   render(){ 
-    var slug = this.props.match.params.slug;
-    var page = typeof this.props.match.params.page == "undefined" ? "" : this.props.match.params.page;
-    slug += page;
+	var path = this.props.location.search;
+	path = path.substring(3,path.length);
     var contentRight = () =>{
-      switch (slug) {
-        case "notice":
-          return <ClassNotice />
-        case "homework":
-        case "student":
+      switch (path) {
+        case "board":
+          return <ClassBoard />
+        case "manage":
           return <ListRegister />
         case "homework":
-          return <ListHomework />  
+		    return <ListHomework />
+		    
         case "homeworkevalution":
           return <ClassEvaluation />
         case "homeworkcreate":
@@ -39,27 +45,48 @@ class Class extends Component {
        
       }
     }
-    console.log(this.props.match.params.slug);
     return(
-    <>
-      <div className = "class-page container">
-        <ClassInfor />
-        <div className="class-instance">
-            <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
-                <Row>
-                    <Col sm={2}>
-                    <ListMyClass />
-                    <br/><br/>
-                      < ClassTasks />
-                    </Col>
-                    <Col sm={9} className = "class-objects">    
-                          {contentRight ()}                  
-                    </Col>
-                </Row>
-            </Tab.Container>
-        </div>
-      </div>
-    </>
+      <>
+          <ClassInfor 
+          courseName = {this.courseName()}
+          />
+          <div className="class__instance">
+              <div className = "row">
+                <div className = "class__instance-top">
+                  <div className = "col span-1-of-5">
+                    <div className = "my_class-list">
+                      <select>
+                        <option>심화프로그래밍_01</option>
+                        <option>심화프로그래밍_02</option>
+                        <option>심화프로그래밍_03</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className = "col span-4-of-5">
+                    <div className = "path-task">
+                      <span>강의실 > 심화프로그래밍_01 > 학습목차</span>
+                    </div>
+                  </div>
+              	</div>
+
+				{/* Navigation 에 잇는 창을 선택함에 따라서 출력함 */}
+                <div className = "class__instance-body">
+					<div className = "col span-1-of-5">
+						<div className = "left-box">
+							<ClassTasks
+							tasks = {['공지 사항','학습 목차', '과제 관리', '수강생 관리']}
+							/>
+						</div>
+					</div>
+					<div className = "col span-4-of-5">
+						<div className = "right-box">
+							{contentRight()}
+						</div>
+					</div>
+				</div>
+			</div>
+          </div>
+      </>
     )
   };
 }

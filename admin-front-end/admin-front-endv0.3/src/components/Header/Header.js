@@ -1,16 +1,15 @@
 import React from 'react';
 import { FaAlignRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import _HeaderTop from './_HeaderTop';
+import {NavLink} from "react-router-dom";
 // const MenuLink = (({label, to, activiOnlyWhenExact}) =>{
 //     return (
 //         <Route path = {to} exact = {activiOnlyWhenExact} children ={({match})=>{
 //             var active = match ? 'activi' : '';
 //             return (
 //                 <li className = {`my-li ${active}`}>
-//                     <Link    to = {to} className = "my-link">
+//                     <NavLink    to = {to} className = "my-link">
 //                         {label}
-//                     </Link>
+//                     </NavLink>
 //                 </li>
 //             )
 //         }}>
@@ -32,7 +31,7 @@ import _HeaderTop from './_HeaderTop';
 
 //                 return (
 //                     <li className={`my-li ${active}`}>
-//                         <Link  to={to} className="my-link">{label}</Link>
+//                         <NavLink  to={to} className="my-link">{label}</NavLink>
 //                     </li>
 //                 );
 //             }}
@@ -53,15 +52,30 @@ class Header extends React.Component {
 
     render() {
       return (
-      <div className = "container-fluid">
-        <_HeaderTop/>
-            <div className = "header-bottom">
-                <ul className = "menu text-center">
-                    <li><Link to="/template">템플릿</Link></li>
-                    <li><Link to="/listproblem">문제 리스트</Link></li>
-                    <li><Link to="/projectmanager">프로젝트 관리</Link></li>
-                    <li><Link to="/admin">마이페이지</Link></li>
-                </ul>
+      <div className = "header">
+             <div className="header__top">
+                <div className = "header__top_logo-box">
+                        <img
+                                src= "./images/logo.jpg"
+                                alt="Dongguk logo"
+                        />
+                </div>
+                <div className = "header__top_text-box">
+                    <h1>DGU IDE</h1>
+                </div>
+                <div className= "header__top_user-box">
+                        <span>201515 (홍길동)</span> &nbsp;<NavLink to = "#">로그아웃</NavLink>
+                </div>
+            </div>
+            <div className = "header__bottom">
+                <div className = "row">
+                    <ul className = "header__bottom-nav ul-nolist-inline">
+                        <li><NavLink to="/template">학습 관리</NavLink></li>
+                        <li><NavLink to="/listproblem">문제 리스트</NavLink></li>
+                        <li><NavLink to="/projectmanager">프로젝트 관리</NavLink></li>
+                        <li><NavLink activeClassName = "nav-selected" to="/admin">마이페이지</NavLink></li>
+                    </ul>
+                </div>
             </div>
       </div>
       )
