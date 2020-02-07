@@ -33,9 +33,35 @@
         font-size: 2rem !important;
         margin-top: 10px;
         background-color: black;
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+        &:active{
+            outline: none;
+            transform: translateY(-.1rem);
+        }
     }
     &__write{
         float: right;
+        background-color: $color-dark;
+        color: white !important;
+        padding: 1.2rem 2rem; 
+    }
+    &__classtask{
+        font-size: 1.8rem;
+        background-color: $color-dark;
+        padding: 0.8rem 2rem;
+        color: white !important;
+    }
+    &__permission, &__refuse{
+        font-size: 1.5rem;
+        background-color: $color-dark;
+        padding: 0.8rem 2rem;
+        color: white !important;
+    }
+    &__refuse{
+        background-color: $color-orange;
     }
     
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Login from '../components/Login'
-import Register from '../components/Register'
+import Login from '../layout/Index/Login'
+import Register from '../layout/Index/Register'
 import Contribution from '../components/Contribution'
 
 export default class Index extends Component {
@@ -17,8 +17,9 @@ export default class Index extends Component {
         )
     }
     menuRightComponents = () => {
-        var slug = this.props.match.params.slug;
-        switch (slug) {
+        var path = this.props.location.search;
+        path = path.substring(3,path.length);
+        switch (path) {
             case "contribution":
                 return <Contribution />;
             case "login":
@@ -34,9 +35,9 @@ export default class Index extends Component {
         <div className = "main">
             <div className = "main__header">
                <ul className = "main__header-nav ul-nolist-inline">
-                    <li><Link to = "/login.html">로그인</Link></li>
-                    <li><Link to = "/register.html">회원가입</Link></li>
-                    <li><Link to = "/login.html">Language(언어)</Link></li>
+                    <li><Link to = "/index?p=login">로그인</Link></li>
+                    <li><Link to = "/index?p=register">회원가입</Link></li>
+                    <li><Link to = "/index?p=language">Language(언어)</Link></li>
                 </ul>
             </div>
             <div className = "main__bottom"> 
@@ -48,7 +49,7 @@ export default class Index extends Component {
                             <h2>온라인 환경에서 개발하세요.</h2>
                             <h3>DGU IDE는 설치가 필요없는 클라우드 통합 개발환경으로 팀의 개발 효율성을 극대화하는데 도움을 줍니다.</h3>
                         <div className = "contribution-box mr-top-small">
-                            <Link to = "/contribution.html" className = "btn btn__contribution">CONTRIBUTION</Link>
+                            <Link to = "/index?p=contribution" className = "btn btn__contribution">CONTRIBUTION</Link>
                         </div>
                 </div>
                 <div className="col span-1-of-2 main__bottom-right">

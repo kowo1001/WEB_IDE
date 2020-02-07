@@ -4,29 +4,33 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
-import ListHomework from '../../../components/_Admin_components/_adm_ListHomework';
-import ClassEvaluation from '../../_Admin/_Class/Evaluation'
-import CreateHomework from '../../_Admin/_Class/CreateHomework'
-import Community from '../../../components/_Admin_components/_adm_Community';
-import ListRegister from '../../../components/_Admin_components/_adm_ListRegister';
+import ListHomework from '../../../layout/Class/ListHomework';
+import ClassEvaluation from '../../../layout/Class/Evaluation'
+import CreateHomework from '../../../layout/Class/CreateHomework'
+import Community from '../../../layout/Class/Community';
+import ListRegister from '../../../layout/Class/ListRegister';
 import ListMyClass from '../../../components/ListMyClass';
 import ClassTasks from '../../../components/ClassTask';
 import ClassInfor from '../../../layout/Class/ClassInfor';
-import ClassBoard from '../../../components/_Admin_components/ClassBoard';
+import ClassBoard from '../../../layout/Class/ClassBoard';
+import ClassDocument from '../../../layout/Class/ClassDocument';
 class Class extends Component {
   constructor(props) {
     super(props);
   }
-  courseName = () => {
-    var courseName = this.props.location.search;
-    courseName = courseName.substring(3,courseName.length);
+  ClassName = () => {
+    return "AAA";
+    // var className = this.props.location.search;
+    // className = className.substring(3, className.length);
   }
   LayoutBottomRight = () => {
 
   }
   render(){ 
-	var path = this.props.location.search;
-	path = path.substring(3,path.length);
+	// var path = this.props.location.search; 
+  // path = path.substring(3,path.length);
+    var path = this.props.block;
+    path = path.substring(3,path.length)
     var contentRight = () =>{
       switch (path) {
         case "board":
@@ -35,11 +39,12 @@ class Class extends Component {
           return <ListRegister />
         case "homework":
 		    return <ListHomework />
-		    
-        case "homeworkevalution":
+        case "evaluatehomework":
           return <ClassEvaluation />
-        case "homeworkcreate":
+        case "createhomework":
           return <CreateHomework />
+        case "classdocument":
+          return <ClassDocument />
         default:
           return <Community /> 
        
@@ -48,7 +53,7 @@ class Class extends Component {
     return(
       <>
           <ClassInfor 
-          courseName = {this.courseName()}
+          // className = {this.className()}
           />
           <div className="class__instance">
               <div className = "row">

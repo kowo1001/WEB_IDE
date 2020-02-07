@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaAlignRight } from "react-icons/fa";
 import {NavLink} from "react-router-dom";
+import { Nav } from 'react-bootstrap';
 // const MenuLink = (({label, to, activiOnlyWhenExact}) =>{
 //     return (
 //         <Route path = {to} exact = {activiOnlyWhenExact} children ={({match})=>{
@@ -70,10 +71,10 @@ class Header extends React.Component {
             <div className = "header__bottom">
                 <div className = "row">
                     <ul className = "header__bottom-nav ul-nolist-inline">
-                        <li><NavLink to="/template">학습 관리</NavLink></li>
-                        <li><NavLink to="/listproblem">문제 리스트</NavLink></li>
-                        <li><NavLink to="/projectmanager">프로젝트 관리</NavLink></li>
-                        <li><NavLink activeClassName = "nav-selected" to="/admin">마이페이지</NavLink></li>
+                        <li><NavLink to="/admin/class">학습 관리</NavLink></li>
+                        <li><NavLink to="/admin/listproblem">문제 리스트</NavLink></li>
+                        <li><NavLink to="/admin/project">프로젝트 관리</NavLink></li>
+                        <li><NavLink  activeClassName = "nav-selected" to="/admin">마이페이지</NavLink></li>
                     </ul>
                 </div>
             </div>

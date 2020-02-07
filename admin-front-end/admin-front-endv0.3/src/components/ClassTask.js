@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Link,NavLink
+    NavLink
   } from "react-router-dom";
 const ClassTasks = (props) => {
     console.log(props.tasks);
