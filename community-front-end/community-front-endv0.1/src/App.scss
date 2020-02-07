@@ -4,4 +4,12 @@
     margin-top: 4rem;
     border: 1px solid black; //테두리 넣어주기
     padding: 1rem;
+
+    .customized-button{  // <Button className="customized-button"> 사용 가능
+        background: black;
+    }
+    .table-width{  // <Button className="customized-button"> 사용 가능
+        width: 100px;
+        border: 1px solid grey;
+    }
 }// 검은 색 사각형 테두리 

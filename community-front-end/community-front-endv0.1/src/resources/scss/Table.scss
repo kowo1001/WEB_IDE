@@ -1,0 +1,11 @@
+$black:black;
+$grey:grey;
+
+
+.Table {
+    &.Table-homework {
+        border-collapse: initial;
+        border: 1px solid grey;
+        width: 100%;
+    }
+}

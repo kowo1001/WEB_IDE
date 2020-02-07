@@ -17,7 +17,7 @@ class ProblemBank extends Component {
               </select>&nbsp;
               <input  id="search" type="text" placeholder="Search.."></input>
               <button type="submit"><i class="fa fa-search"></i></button>
-              <Link className = "btn btn-primary pull-right" type="button" onClick = {()=> this.writeNotice()}>문제 작성</Link>
+              <Button size="large" onClick = {()=> this.writeNotice()}>문제 작성</Button>
             </div>
             <div className = "list-problem, , body-height"><br/>
             <table class="table table-bordered table-hover">

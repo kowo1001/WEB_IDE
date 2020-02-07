@@ -5,9 +5,8 @@ import {
     Link
   } from "react-router-dom";
 
-import { Button,
-    ButtonGroup,
-  Table,
+import { 
+  ButtonGroup,
   ListGroup,
   Tab,
   Row,
@@ -15,57 +14,69 @@ import { Button,
   Navbar,
   Container
 } from 'react-bootstrap';
+import Button from '../../components/Button';
+import Table from '../../components/Table';
+
+
 class Homework extends Component {
   render(){ 
     return(
         <div className = "homwork">
         <div className = "hw-top">
-             <div className="row">
-             <Table responsive className = "homework-table">
+            {/* <table className="table_homework" border = "1"> */}
+             <Table className="Table-homework">
                  <tbody>
-                     <tr>
-                         <td> 
-                             <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <tr>
+                        <th colSpan="2"> 
                                  <h4><b>[일반과제] 1주차 심화프로그래밍실습과제</b></h4>
-                             </div>     
-                             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 class-talks">
-                                 <ButtonGroup className="pull-right">
-                                    <button className = "btn btn-primary"> <Link to="/admin/class/homework/evalution">제출 정보</Link></button>
-                                 </ButtonGroup>
+                        </th>
+                        <td>
+                        </td>
+                        <td>     
+                             <div>
+                                    <Button color="orange" size="large"><Link to="/admin/class/homework/evalution">제출 정보</Link></Button>
                              </div>
                          </td>
                      </tr>
                      <tr>
+                         <td>제출 기간</td>
                          <td> 
-                             <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                                 제출기간 : <b> 2020.1.20 ~ 2020.02.3.03 </b>
+                             <div>
+                                2020.03.02 ~ 2020.03.08
                              </div>     
-                             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                 
-                             </div>  
                          </td>
-                     </tr>
-                     <tr>
-                         <td> 
-                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                 이번 과제는 클래스를 구현하는 프로그램입니다.<br/>
-                                 문의 : hoggiltog@dongguk.edu
-                             </div>
+                         <td>    
                          </td>
                      </tr>
                      <tr>
                          <td>
-                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                 첨부 파일 : &nbsp;
+                             과제 설명
+                         </td>
+                         <td> 
+                             <div>
+                                이번 과제는 클래스를 구현하는 프로그램입니다.<br/>
+                                 {/* 문의 : hoggiltog@dongguk.edu */}
+                             </div>
+                         </td>
+                         <td> 
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             첨부 파일
+                         </td>
+                         <td>
+                             <div>
                                  <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
                              </div>
+                         </td>
+                         <td>
                          </td> 
                      </tr>
                  </tbody>
              </Table>
              </div>
          </div>      
-     </div>
     )
   };
 }
