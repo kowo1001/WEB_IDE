@@ -6,10 +6,8 @@ export default class ProblemDetails extends Component {
         return (
             <div  className = "problem_detail">
                 <div className = "problem_name u-mr-top-small">
-                    <span>{this.props.problem_id}. 겜블 게임 구현</span>
+                    <span>{this.props.problem_id}. 하노이 탑</span>
                     <Link to = "#"  className = "btn btn_primary" >프로젝트 생성</Link>&nbsp;
-                    <Link to = "#"  className = "btn btn_primary" >전 문제</Link>&nbsp;
-                    <Link to = "#"  className = "btn btn_primary" >후 문제</Link>
                 </div>
                 <div className = "problem_content">
                     <div className = "define border-btm">
@@ -35,11 +33,15 @@ export default class ProblemDetails extends Component {
                     <div className = "problem-example">                   
                         <div className = "col span-1-of-2 example_input">
                             <h3 >입력 예제 1</h3><br/>
-                            <textarea className="form-control" rows="5" disabled defaultValue = "입력 값"></textarea>
+                            <textarea className="form-control" cols="55"rows="15" disabled>
+
+                            </textarea>
                         </div>
                         <div className = "col span-1-of-2 example_output">
                             <h3 >출력 예제 1</h3><br/>
-                            <textarea className="form-control" rows="5" disabled defaultValue = "출력 값"></textarea>
+                            <textarea className="form-control" cols="55" rows="15" disabled >
+
+                            </textarea>
                         </div>
                     </div>    
                 </div>

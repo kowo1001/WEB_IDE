@@ -7,7 +7,7 @@ export default class ListProblem extends Component {
         var listProblem = [
             {
                 'num' :  1234,
-                'title' : "하노이",
+                'title' : "하노이 탑",
                 'author' : "홍길동",		
                 'date' : "2020.03.23",
                 'view_num' : "10",
