@@ -14,12 +14,12 @@ import ClassTasks from '../../../components/ClassTask';
 import ClassInfor from '../../../layout/Class/ClassInfor';
 import ClassBoard from '../../../layout/Class/ClassBoard';
 import ClassDocument from '../../../layout/Class/ClassDocument';
+import QuestionAnswer from '../../../layout/Class/QuestionAnswer';
 class Class extends Component {
   constructor(props) {
     super(props);
   }
   ClassName = () => {
-    return "AAA";
     // var className = this.props.location.search;
     // className = className.substring(3, className.length);
   }
@@ -30,7 +30,7 @@ class Class extends Component {
 	// var path = this.props.location.search; 
   // path = path.substring(3,path.length);
     var path = this.props.block;
-    path = path.substring(3,path.length)
+    path = path.substring(3,path.length);
     var contentRight = () =>{
       switch (path) {
         case "board":
@@ -43,11 +43,12 @@ class Class extends Component {
           return <ClassEvaluation />
         case "createhomework":
           return <CreateHomework />
-        case "classdocument":
+        case "qa":
+          return <QuestionAnswer />
+        case "resources":
           return <ClassDocument />
         default:
           return <Community /> 
-       
       }
     }
     return(
@@ -55,12 +56,12 @@ class Class extends Component {
           <ClassInfor 
           // className = {this.className()}
           />
-          <div className="class__instance">
+          <div className="class_instance">
               <div className = "row">
-                <div className = "class__instance-top">
+                <div className = "class_instance-top">
                   <div className = "col span-1-of-5">
                     <div className = "my_class-list">
-                      <select>
+                      <select className = "u-outline-null">
                         <option>심화프로그래밍_01</option>
                         <option>심화프로그래밍_02</option>
                         <option>심화프로그래밍_03</option>
@@ -75,7 +76,7 @@ class Class extends Component {
               	</div>
 
 				{/* Navigation 에 잇는 창을 선택함에 따라서 출력함 */}
-                <div className = "class__instance-body">
+                <div className = "class_instance-body">
 					<div className = "col span-1-of-5">
 						<div className = "left-box">
 							<ClassTasks

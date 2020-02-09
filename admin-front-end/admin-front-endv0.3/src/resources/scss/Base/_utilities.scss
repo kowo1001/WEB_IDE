@@ -6,35 +6,73 @@
     list-style: none;
     display: inline-block !important;
 }
-.mr-top-small{
+/*============== Padding===============*/
+.padding-5{
+    padding: 0.5rem;
+}
+/*============== Border  & Outline : none===============*/
+.u-border-null{
+    border: none !important;
+}
+.border-1{
+    border: 1px solid black;
+}
+.border-btm{
+    border-bottom: 1px solid black
+}
+.u-outline-null{
+    outline: none !important;
+}
+/*============== Margin ===============*/
+.u-mr-top-small{
     margin-top: 1rem;
 }
-.mr-bottom-small{
+.u-mr-top-big{
+    margin-top: 6rem;
+}
+.u-mr-bottom-small{
     margin-bottom: 1rem;
 }
-.mr-bottom-big{
+.u-mr-bottom-big{
     margin-bottom: 6rem;
 }
-.btn-shadow{
-    box-shadow: 0 .5rem 2rem rgba(black, 0.2);
-}
-.text-center{
+/*============== Text ===============*/
+.u-text-center{
     text-align: center;
 }
-.text-right{
+.u-text-left{
+    text-align: left;
+}
+.u-text-right{
     text-align: right;
 }
-.float-right{
+/*============== Float ===============*/
+.u-float-right{
     float: right;
 }
+.u-float-left{
+    float: right;
+}
+
 .nav-selected{
     background-color: $color-brown;
     color: white !important;
-    margin-left: 8px;
 }
+
+.nav-selected-body{
+    background-color: $color-orange;
+    color: white !important;
+}                 
+.nav-selected-class{
+    background-color: $color-dark;
+ }
 .border-bottom{
     width: 50%;
     outline: none;
     border: none;
     border-bottom: 1px solid black;
+}
+.icon{
+    position: relative;
+    top: 1px;
 }

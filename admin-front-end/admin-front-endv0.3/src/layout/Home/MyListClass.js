@@ -46,7 +46,7 @@ class MyListCoures extends Component {
                     <tr key = {index}>
                         <td>{item.id}</td>
                         <td>{item.unit}</td>
-                        <td><Link to = {`admin/class?p=${item.name}`} >{item.name}<TiArrowRightThick /></Link></td>
+                        <td><Link to = {`/admin/class?p=${item.name}`} >{item.name}<TiArrowRightThick /></Link></td>
                         <td>{item.professor}</td>
                     </tr>
                 ))  

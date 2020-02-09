@@ -6,6 +6,7 @@ import { TiArrowUnsorted } from "react-icons/ti";
 import {
     Link
   } from "react-router-dom";
+import SelectSearch from '../../components/SelectSearch';
 
 class ListRegister extends Component {
     
@@ -72,19 +73,11 @@ class ListRegister extends Component {
         return (
             <div className="class_student">
                 <h2><i class = "icon"> <FaUserGraduate /></i>수강생 관리</h2>
-                <div className = "headding mr-bottom-small">
-                    <select className = "select-option" required="required">
-                        <option value="">이름</option>
-                        <option value="">학번</option>
-                        <option value="">전공</option>
-                    </select>
-                    <div className = "search__box">
-                        <input  className = "search__box-text" type="text" placeholder="Search.."></input>
-                        <button className = "search__box-btn" type="submit"><i class="icon"><FaSearch/></i></button>
-                    </div>
+                <div className = "headding u-mr-bottom-small">
+                   <SelectSearch />
                 </div>
                 <div className = "list-waiting">
-                    <h3 className = "mr-bottom-small"><i class = "icon"> <IoMdListBox />&nbsp;</i>수강생 관리</h3>
+                    <h3 className = "u-mr-bottom-small"><i class = "icon"> <IoMdListBox />&nbsp;</i>수강생 관리</h3>
                     <table class="table table-contribution" border = "1">
                         <thead>
                             <tr>
@@ -109,8 +102,8 @@ class ListRegister extends Component {
                                                 <td>{item.number}</td>
                                                 <td>{item.email}</td>
                                                 <td className = "td-tasks">
-                                                    <Link className = "btn__permission">허락</Link>
-                                                    <Link className = "btn__refuse">거절</Link>
+                                                    <Link className = "btn_permission">허락</Link>
+                                                    <Link className = "btn_refuse">거절</Link>
                                                 </td>
                                             </tr>
                                         ) 
@@ -119,8 +112,8 @@ class ListRegister extends Component {
                                 </tbody>
                         </table>
                     </div>
-                <div className = "list-registed mr-top-small">
-                    <h3 className = "mr-bottom-small"><i class = "icon"> <GoChecklist />&nbsp;</i>수강생 완료 목록</h3>
+                <div className = "list-registed u-mr-top-small">
+                    <h3 className = "u-mr-bottom-small"><i class = "icon"> <GoChecklist />&nbsp;</i>수강생 완료 목록</h3>
                     <table class="table table-contribution" border = "1">
                         <thead>
                             <tr>
@@ -145,7 +138,7 @@ class ListRegister extends Component {
                                         <td>{item.number}</td>
                                         <td>{item.email}</td>
                                         <td class = "td-tasks">
-                                            <Link className = "btn__refuse">삭제</Link>
+                                            <Link className = "btn_refuse">삭제</Link>
                                         </td>
                                     </tr>
                                 ) 

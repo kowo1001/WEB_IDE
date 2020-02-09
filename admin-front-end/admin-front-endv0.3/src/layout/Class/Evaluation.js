@@ -5,6 +5,7 @@ import { MdSpeakerNotes } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { TiArrowUnsorted } from "react-icons/ti";
 import CKEditor from 'ckeditor4-react';
+import SelectSearch from '../../components/SelectSearch';
 
 var displayCheck;
 class ClassEvaluation extends Component {
@@ -85,18 +86,8 @@ class ClassEvaluation extends Component {
     return(            
         <div className = "class_evaluation">
             <h2><i className = "icon"> <MdSpeakerNotes /></i>과제 평가</h2>
-            <div className = "headding">
-                <select className = "select-option" required="required">
-                    <option value="">번호</option>
-                    <option value="">제목</option>
-                    <option value="">작성일</option>
-                </select>
-                <div className = "search__box">
-                    <input  className = "search__box-text" type="text" placeholder="Search.."></input>
-                    <button className = "search__box-btn" type="submit"><i class="icon"><FaSearch/></i></button>
-                </div>
-                <Link className = "btn__write mr-bottom-small" ><i className = "icon"><FaEdit/></i>저장</Link>
-            </div>
+            <SelectSearch />
+                <Link className = "btn_write u-mr-bottom-small" ><i className = "icon"><FaEdit/></i>저장</Link>
             <div className = "list_student">
                 <table class="table table-contribution" border = "1">
                     <thead>
@@ -124,7 +115,6 @@ class ClassEvaluation extends Component {
                                     <td>{item.source}</td>
                                     <td><input type="text" size = "1" placeholder = "0"/></td>
                                     <td class = "td-tasks">
-                                        <button  onClick = {() => this.checkCKEditor() } style = {{cursor: 'pointer'}} className = "btn">보기</button>
                                         <button  onClick = {() => this.checkCKEditor() } style = {{cursor: 'pointer'}} className = "btn">쓰기</button>
                                     </td>
                                 </tr>
@@ -134,7 +124,7 @@ class ClassEvaluation extends Component {
                     </tbody>
                 </table>
             </div>
-            <div class="write_evaluation mr-top-small" style = {displayCheck}>
+            <div class="write_evaluation u-mr-top-small" style = {displayCheck}>
                 <h2><i className = "icon"><FaEdit/></i>평가 작성</h2>
                 <CKEditor
                     data="<p> 과제 설명 입력하세요</p>"

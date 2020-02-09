@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAlignRight } from "react-icons/fa";
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import { Nav } from 'react-bootstrap';
 // const MenuLink = (({label, to, activiOnlyWhenExact}) =>{
 //     return (
@@ -65,16 +65,16 @@ class Header extends React.Component {
                     <h1>DGU IDE</h1>
                 </div>
                 <div className= "header__top_user-box">
-                        <span>201515 (홍길동)</span> &nbsp;<NavLink to = "#">로그아웃</NavLink>
+                        <span>201515 (홍길동)</span> &nbsp;<Link to = "/index">로그아웃</Link>
                 </div>
             </div>
             <div className = "header__bottom">
                 <div className = "row">
                     <ul className = "header__bottom-nav ul-nolist-inline">
-                        <li><NavLink to="/admin/class">학습 관리</NavLink></li>
-                        <li><NavLink to="/admin/listproblem">문제 리스트</NavLink></li>
-                        <li><NavLink to="/admin/project">프로젝트 관리</NavLink></li>
-                        <li><NavLink  activeClassName = "nav-selected" to="/admin">마이페이지</NavLink></li>
+                        <li><NavLink activeClassName = "nav-selected" to="/admin/class">학습 관리</NavLink></li>
+                        <li><NavLink activeClassName = "nav-selected" to="/admin/listproblem">문제 리스트</NavLink></li>
+                        <li><NavLink activeClassName = "nav-selected" to="/admin/project">프로젝트 관리</NavLink></li>
+                        <li><NavLink activeClassName = "nav-selected" exact to="/admin/home" >마이페이지</NavLink></li>
                     </ul>
                 </div>
             </div>

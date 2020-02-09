@@ -3,6 +3,8 @@ import { FaSearch,FaEdit } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { GoFilePdf } from 'react-icons/go'
 import CKEditor from 'ckeditor4-react';
+import SelectSearch from '../../components/SelectSearch';
+import FormWriteClass from '../../components/FormWriteClass';
 export default class ClassDocument extends Component {
   
     render() {
@@ -46,21 +48,13 @@ export default class ClassDocument extends Component {
 
         ]
         return (
-            <div className = "class_document">
+            <div className = "class_resources">
                 <h2><i class = "icon"> </i>학습 자료실</h2>
                 <div className = "headding">
-                    <select className = "select-option" required="required">
-                        <option value="">번호</option>
-                        <option value="">제목</option>
-                        <option value="">작성일</option>
-                    </select>
-                    <div className = "search__box">
-                        <input  className = "search__box-text" type="text" placeholder="Search.."></input>
-                        <button className = "search__box-btn" type="submit"><i class="icon"><FaSearch/></i></button>
-                    </div>
-                    <Link className = "btn__write mr-bottom-small" to = "#" ><i className = "icon"><FaEdit/></i>작성하기</Link>
+                    <SelectSearch />
+                    <Link className = "btn_write u-mr-bottom-small" to = "#" ><i className = "icon"><FaEdit/></i>작성하기</Link>
                 </div>
-                <div  className = "document_content">
+                <div  className = "resources_content">
                     <table class="table table-contribution" border = "1">
                         <thead>
                             <tr>
@@ -93,26 +87,11 @@ export default class ClassDocument extends Component {
                         </tbody>
                     </table>
                 </div>
-                <div className = "document_add mr-top-small">
-                    <form action="" method="POST" role="form">
-                        <legend >학습 자료실 작성</legend>
-                        <div class="form-group">
-                            <div className = "board-title">
-                                <b>제목 : </b>
-                                <input className = "border-bottom" type="text" />
-                            </div>
-                            <div className = "board-content">
-                                <b>내용 :</b><br/>
-                                <CKEditor
-                                    data="<p> 공지사항 내용 입력하세요</p>"
-                                />
-                            </div>
-                            <div className = "board-file">
-                                <b>첨부 파일 : </b> <input type = "file"/>                         
-                            </div>
-                            <button type="submit" class="btn__primary">공지 등록</button>
-                        </div>  
-                    </form>
+                <div className = "resources_add u-mr-top-small">
+                    <FormWriteClass
+                            title = "학습 자료실"
+                            btnName = "학습 자료실 등록"
+                        />
                 </div>
             </div>
         )

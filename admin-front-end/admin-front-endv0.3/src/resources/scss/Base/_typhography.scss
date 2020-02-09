@@ -5,9 +5,14 @@ body{
     line-height: 1.7;
     color: black;
 }
-.main__bottom-left{
+/*
+Text for index page
+*/
+.main_bottom-left{
     padding: 100px;
-    font-weight: bold;
+    font-weight: bold; 
+    animation: moveInLeft 1s ease-out;
+    animation-iteration-count: 1;
     .logo_text{
         font-size: 6rem;
         margin-bottom: 10px;
@@ -25,6 +30,10 @@ body{
 .text{
     color: black;
     margin-bottom: 5rem;
+     /*
+    ==Text headding for home
+    아이/비밀번호 찾기
+    */
     &_primary{
         color: blue;
        &:hover{
@@ -36,6 +45,7 @@ body{
     }   
     /*
     ==Text headding for home
+    학기 정보
     */
     &_headding{
         font-weight: normal;
@@ -55,8 +65,4 @@ body{
 .path-task{
     font-weight: 500;
     padding-left: 5px;   
-}
-.icon{
-    position: relative;
-    top: 1px;
 }

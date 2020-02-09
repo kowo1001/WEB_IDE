@@ -6,24 +6,17 @@ import HomeWork from '../../components/Homework';
 import { MdLibraryBooks } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
+import SelectSearch from '../../components/SelectSearch';
 class ListHomework extends Component {
   render(){ 
     return(
       <div className = "class_homeworks">   
         <h2><i className = "icon"><MdLibraryBooks /></i>과제 관리</h2>    
-        <div className = "headding mr-bottom-big">
-            <select className = "select-option" required="required">
-                <option value="">번호</option>
-                <option value="">제목</option>
-                <option value="">작성일</option>
-            </select>
-            <div className = "search__box">
-                <input  className = "search__box-text" type="text" placeholder="Search.."></input>
-                <button className = "search__box-btn" type="submit"><i class="icon"><FaSearch/></i></button>
-            </div>
-            <Link className = "btn__classtask" to = "class?p=createhomework" ><i className = "icon"><FaEdit/>&nbsp;</i>과제 등록</Link>
+        <SelectSearch />
+        <div className = "u-text-right u-mr-bottom-small">
+          <Link className = "btn_classtask" to = "class?p=createhomework" ><i className = "icon"><FaEdit/>&nbsp;</i>과제 등록</Link>
         </div>
-        <div className =  "list__homework">
+        <div className =  "list_homework">
             <HomeWork />
             <HomeWork />
             <HomeWork />

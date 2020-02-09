@@ -3,6 +3,7 @@ import HomeOption from '../../../components/HomeOption';
 import Profile from '../../../components/Profile'
 import MyListClass from '../../../layout/Home/MyListClass';
 import CreateClass from '../../../layout/Home/CreateClass';
+import Class from '../_Class/Class';
 class Home extends Component {
   constructor(props)
   {
@@ -15,7 +16,9 @@ class Home extends Component {
       case "home":
         return <MyListClass />
       case "openclass":
-          return <CreateClass />
+        return <CreateClass />
+      case "class":
+        return <Class />
       default:
           return <MyListClass />
     }
@@ -28,10 +31,24 @@ class Home extends Component {
           <div className = "row">
               <div className = "home__top nav-bar">
                 <HomeOption  
-                  li_1 = "개설 강좌 목록"
-                  li_2 = "인스턴스 개설"
-                  li_3 = "학습 관리"
-                  li_4 = "내 시간표"
+                  headerText = {[
+                      {
+                        title : "강좌 목록",
+                        page  : "home"
+                      },
+                      {
+                        title : "강좌 오픈",
+                        page  : "openclass"
+                      },
+                      {
+                        title : "학습 관리",
+                        page  : "class"
+                      },
+                      {
+                        title : "시간표",
+                        page  : "time"
+                      }
+                    ]}
                 />
                 </div>
                 <div className = "home_bottom">
@@ -48,4 +65,5 @@ class Home extends Component {
     )
   };
 }
+
 export default Home;

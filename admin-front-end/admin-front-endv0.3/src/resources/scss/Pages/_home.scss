@@ -1,5 +1,5 @@
 .home{
-    height: 52vh;
+    height: 70vh;
     position: relative;
     a{
         color: black;
@@ -7,6 +7,9 @@
     .home_bottom-box{
         /*Home page -> Open Class*/
         .open_class{
+            .open_td{
+                padding: 8px;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import {FaSearch, FaEdit} from 'react-icons/fa';
+import SelectSearch from '../../components/SelectSearch';
 export default class ListProblem extends Component {
     render() {
         var listProblem = [
@@ -95,18 +96,10 @@ export default class ListProblem extends Component {
         ];
         return (
             <div className = "list_problem">
-                <h2 className = "text-center">문제 리스트</h2>
+                <h2 className = "u-text-center">문제 리스트</h2>
                     <div className = "headding">
-                            <select className = "select-option" required="required">
-                                <option value="">번호</option>
-                                <option value="">제목</option>
-                                <option value="">언어</option>
-                            </select>
-                            <div className = "search__box">
-                                <input  className = "search__box-text" type="text" placeholder="Search.."></input>
-                                <button className = "search__box-btn" type="submit"><i className="icon"><FaSearch/></i></button>
-                            </div>
-                            <Link className = "btn__write mr-bottom-small" to = "listproblem?p=createproblem" ><i className = "icon"><FaEdit/></i>문제 작정</Link>
+                           <SelectSearch />
+                            <Link className = "btn_write u-mr-bottom-small" to = "listproblem?p=createproblem" ><i className = "icon"><FaEdit/></i>문제 작정</Link>
                     </div>
                 	<table className="table table-contribution" border = "1">
 					<thead>

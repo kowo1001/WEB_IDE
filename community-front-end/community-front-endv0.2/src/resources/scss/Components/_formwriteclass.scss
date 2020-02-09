@@ -1,0 +1,43 @@
+.form_write{
+    border: 1px solid black;
+    padding-bottom: 1rem;
+    legend{
+        background-color: rgba($color-dark,  .5);
+        padding: 5px ;
+    }
+    .form_title,.form_content,.form_file{
+        padding: 0.5rem;
+        input{
+            width: 50%;
+            border: none;
+            border-bottom: 1px solid $color-dark;
+            outline: none;
+            padding: 0.5rem;
+        }
+        .file_update{
+            border: none;
+        }
+    }
+}
+.form_itemview{
+    border: 1px solid black;
+    &-title{
+        background-color: rgba($color-dark,  .5);
+        padding: 0.5rem;
+        .tasks{
+            float: right;
+            font-weight: 1000;
+            a{
+                margin-left: 10px;
+            }
+        }
+    }
+    &-content{
+        border-top: 1px solid $color-dark;
+        padding: 15px 5px 15px 5px;
+        border-bottom: 1px solid $color-dark;
+    }
+    &-information, &-file{
+        padding: 0.5rem;
+    }
+}

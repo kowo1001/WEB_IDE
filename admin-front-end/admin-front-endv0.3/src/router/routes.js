@@ -10,8 +10,7 @@ class Routes extends React.Component {
       return (    
         <>
             <Route exact path = "/" component = {Index} />
-            <Route path = "/index" component = {Index} />
-
+            <Route exact path = "/index" component = {Index} />
             <Route exact path = "/admin" component = {Main} />
             <Route exact path = "/admin/:slug" component = {Main} />
       </>  
@@ -19,3 +18,4 @@ class Routes extends React.Component {
     }
   }
 export default Routes;
+ 
