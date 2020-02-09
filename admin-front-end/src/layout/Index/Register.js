@@ -11,9 +11,9 @@ export default class Register extends Component {
                        <table className="register-table"> 
                            <tbody>
                                <tr>
-                                   <td width = "20%">아이디</td>
+                                   <td width = "20%">학번</td>
                                    <td width = "80%">
-                                   <input type="text" name="id" id="input" placeholder = "아이디" />
+                                   <input type="text" name="id" id="input" placeholder = "학번" />
                                    </td>
                                 </tr>
                                 <tr>
