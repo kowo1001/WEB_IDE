@@ -37,14 +37,17 @@ $yellow: #fab005; //YELLOW 7
     &.large {
         height: 3rem; //버튼의 크기는 3rem으로 함
         font-size: 1.25rem; //16*1.25px로 설정
+        margin-right: 1rem;
     }
     &.medium {
         height: 2.25rem; //버튼의 크기는 2.25rem으로 함 rem=2.25*16px=기본 폰트 사이즈에 기반하여 사이즈가 조정됨.
         font-size: 1rem; //16px로 설정
+        margin-right: 1rem;
     }
     &.small {
         height: 1.75rem; //버튼의 크기는 1.75rem으로 함 
         font-size: 0.875rem; //16*0.875px로 설정
+        margin-right: 1rem;
     }
 
     height: 2.25rem; //버튼의 크기는 2.25rem으로 함 rem=2.25*16px=기본 폰트 사이즈에 기반하여 사이즈가 조정됨.
