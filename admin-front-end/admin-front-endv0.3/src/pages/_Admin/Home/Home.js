@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import { 
-} from 'react-bootstrap';
 import HomeOption from '../../../components/HomeOption';
-import Profile from '../../../components/Profile/Profile'
-import MyListCoures from '../../../layout/Home/MyListCourses';
-import CreateCourse from '../../../layout/Home/CreateCourse';
+import Profile from '../../../components/Profile'
+import MyListClass from '../../../layout/Home/MyListClass';
+import CreateClass from '../../../layout/Home/CreateClass';
 class Home extends Component {
   constructor(props)
   {
     super(props);
   }
   LayoutHomeBottom = () =>{
-    var path = this.props.location.search;
-    path = path.substring(3,path.length);
-    switch (path) {
+    var path = this.props.block;
+    var block = path.substring(3,path.length);
+    switch (block) {
       case "home":
-        return <MyListCoures />
-      case "opencourse":
-          return <CreateCourse />
+        return <MyListClass />
+      case "openclass":
+          return <CreateClass />
       default:
-        return <MyListCoures />
+          return <MyListClass />
     }
   }
   render(){ 

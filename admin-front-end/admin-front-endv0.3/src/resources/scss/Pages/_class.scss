@@ -1,5 +1,4 @@
 .class__instance{
-    height: $height-class-body;
     height: 100%;
     margin-bottom: 10rem;
     a{
@@ -47,7 +46,7 @@
             /*
             공지 사항, 학습 목차, ... show layout
             */
-            .class-board{
+            .class_board{
                 .board__content-view{
                     border: 1px solid $color-dark;
                     .board-title{
@@ -97,7 +96,10 @@
                 }
                 
             }
-            .homeworks{
+            .class_homeworks{
+                .btn__classtask{
+                    float: right;
+                }
                 .list__homework{
                     .homework{
                         border: 1px solid $color-dark;
@@ -108,12 +110,11 @@
                                 padding: 5px;
                             }
                             .tasks{
-                              float: right;
-                              position: relative;
-                              top: -4rem;
+                            float: right;
+                            margin-top: -4.5rem;
                               ul li{
                                   display: inline-block;
-                                  margin-left: 10px;
+                                  margin-left: 0.5rem;
                               } 
                             }
                         }
@@ -124,9 +125,58 @@
                         .homework_file{
                             border: none;
                         }
+                        border-bottom: 0.5rem solid $color-dark;
                         margin-bottom: 3rem;
+                        box-shadow: 0rem 1.5rem 4rem rgba($color-dark,0.2);
                     }
                    
+                }
+            }
+            .class_student{
+                .td-tasks{
+                    padding:10px !important;
+                    a{
+                        margin-left: 4px;
+                    }
+                }
+            }
+            .class_create-homework{
+                .homework_content{
+                    legend{
+                        background-color: rgba($color-dark, 0.5);
+                    }
+                    b{
+                        padding: 2px;
+                    }
+                    #btn-editor{
+                        margin-left: 44%;
+                    }
+                    border: 1px solid #ccc;
+                }
+                .cke-editor{
+                    width: 100%;
+                }
+                .col:nth-child(2){
+                    margin-left: 1rem !important;
+                    .text-editor{
+                        display: none;
+                        padding-top: 1rem;
+                    }
+                    #viewEditor{
+                        width: 100%;
+                    }
+                }
+              
+            }
+            .class_document{
+                .document_add{
+                    border: 1px solid #ccc;
+                    legend{
+                        background-color: rgba($color-dark, 0.5);
+                    }
+                    .form-group{
+                        padding: 5px;
+                    }
                 }
             }
         }
