@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { MdSpeakerNotes } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import Button from '../../components/Button';
 
 export default class CreateClass extends Component {
 
@@ -94,7 +95,7 @@ export default class CreateClass extends Component {
                                             <td>{item.class_num}</td>
                                             <td>{item.grade}</td>
                                             <td>{item.syllabus}</td>
-                                            <td><Link to = "#" className = "btn__permission" onClick = { (event) => {this.openClassSubmit(event)}}>신청</Link></td>
+                                            <td><Button size="medium" color="orange"><Link to = "#" onClick = { (event) => {this.openClassSubmit(event)}}>신청</Link></Button></td>
                                         </tr>
                                     )
                                 })
@@ -131,7 +132,7 @@ export default class CreateClass extends Component {
                                             <td>{item.class_num}</td>
                                             <td>{item.grade}</td>
                                             <td>{item.syllabus}</td>
-                                            <td><Link to = "#" className = "btn__permission" onClick = { (event) => {this.openClassSubmit(event)}}>취소</Link></td>
+                                            <td><Button size="medium" color="yellow"><Link to = "#" onClick = { (event) => {this.openClassSubmit(event)}}>취소</Link></Button></td>
                                         </tr>
                                     )
                                 })

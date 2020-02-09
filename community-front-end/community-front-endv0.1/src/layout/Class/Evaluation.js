@@ -96,47 +96,106 @@ class ClassEvaluation extends Component {
                     <input  className = "search__box-text" type="text" placeholder="Search.."></input>
                     <button className = "search__box-btn" type="submit"><i class="icon"><FaSearch/></i></button>
                 </div>
-                <div className="profile_right_works">
-                    <Button size="large" color="yellow"> <Link to="#" ><i className = "icon"><FaEdit/></i>저장</Link></Button>
-                </div>
+                    <Link className = "btn__save mr-bottom-small" ><i className = "icon"><FaEdit/></i>&nbsp;프로젝트 생성</Link>  
             </div>
             <div className = "list_student">
                 <table class="table table-contribution" border = "1">
                     <thead>
                         <tr>
-                            <th width = "10%">기본정보</th>
+                            <th  colspan="2" width = "10%">기본정보</th>
                         </tr>
+
                     </thead>
                     <tbody>
-                        <td>{
-                            <table class="table table-contribution" border = "1">
-                                    <thead>
-                                        <tr>
-                                            <th width = "7%">제출정보</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            <td >ddd</td>
 
-                                        }
-                                    </tbody>
-                                </table>
+                            <tr>
+                                <th width ="15%">
+                                    과제명
+                                </th>
+                                <td>
+                                    1차 과제
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    제출기간
+                                </th>
+                                <td>
+                                    2019-04-16 00:00 ~ 2019-05-13 23:59
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    과제 내용
+                                </th>
+                                <td>
+                                    <p>1차 과제 제출은 아래 파일명 양식에 맞추어 수정 후 제출바랍니다.</p>
+                                    <p>
+                                        <br></br>
+                                    </p>
+                                    <p>
+                                        파일명 : "학번_성명_1차과제"&nbsp;
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    참고 자료
+                                </th>
+                                <td>
 
-                            }
-                        </td>
-                        
+                                </td>
+                            </tr>
                     </tbody>
+                    <tfoot>
+                    </tfoot>
+
                     <thead>
-                        <tr>
-                            <th width = "7%">제출정보</th>
-                        </tr>
+                            <tr>
+                                <th colspan="2" width = "15%">제출정보</th>
+                            </tr>
                     </thead>
                     <tbody>
-                        {
-                            <td>ddd</td>
-
-                        }
+                        <tr>
+                            <th>
+                                제출자
+                            </th>
+                            <td>
+                                홍길동(201515)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                과제설명
+                            </th>
+                            <td>
+                                하노이탑 구현 과제
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                첨부파일
+                            </th>
+                            <td>
+                                201515_홍길동_1차과제.hwp
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                제출상태
+                            </th>
+                            <td>
+                                제출완료
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                과제제출일시
+                            </th>
+                            <td>
+                                2019-04-28 19:14
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -7,7 +7,7 @@ export default class ProblemDetails extends Component {
             <div  className = "problem-detail">
                 <div className = "problem-name mr-top-small">
                     <span>{this.props.problem_id}. 하노이 탑</span>
-                     <Link to = "#" className = "btn btn__primary" >프로젝트 생성</Link>&nbsp;
+                     <Link to = "#" className = "btn__write mr-bottom-small" >프로젝트 생성</Link>&nbsp;
                 </div>
                 <div className = "problem-content">
                     <div className = "define">
@@ -46,10 +46,21 @@ export default class ProblemDetails extends Component {
                     </div>
                     <div className = "problem-example">                   
                         <div className = "col span-1-of-2 example_input">
-                            <textarea className="form-control" rows="10" cols="70" disabled defaultValue = "입력값"></textarea>
+                            <textarea className="form-control" rows="10" cols="70" disabled>
+                            3
+
+                            </textarea>
                         </div>
                         <div className = "col span-1-of-2 example_output">
-                            <textarea className="form-control" rows="10" cols="70" disabled defaultValue = "출력값">
+                            <textarea className="form-control" rows="10" cols="70" disabled>
+                            7
+                            1 3
+                            1 2
+                            3 2
+                            1 3
+                            2 1
+                            2 3
+                            1 3
                             </textarea>
                         </div>
                     </div>    
