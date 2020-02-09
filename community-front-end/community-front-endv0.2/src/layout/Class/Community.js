@@ -26,14 +26,13 @@ export default class Community extends Component {
                         <tr>
                             <td><Link to = "class?p=qa"> 질의 응답</Link></td>
                             <td></td>
-                            <td>시험 문의</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td><Link to = "class?p=resources">학습 자료실</Link></td>
-                            <td>week1.pdf</td>
-                            <td>week2.pdf</td>
-                            <td>week3.pdf</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

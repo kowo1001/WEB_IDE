@@ -595,8 +595,7 @@ input.input100 {
 
 .header__top_user-box span {
   font-size: 2rem;
-  padding: 10px;
-  background-color: #d35400;
+  padding: 10px;  
 }
 
 .header__bottom {
@@ -689,6 +688,7 @@ input.input100 {
   padding: 1.1rem;
   font-size: 1.6rem;
   color: white;
+  text-align: center;
 }
 
 .class__info .row {

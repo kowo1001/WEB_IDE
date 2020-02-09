@@ -32,23 +32,27 @@ class Home extends Component {
               <div className = "home__top nav-bar">
                 <HomeOption  
                   headerText = {[
-                      {
-                        title : "강좌 목록",
-                        page  : "home"
-                      },
-                      {
-                        title : "강좌 오픈",
-                        page  : "openclass"
-                      },
-                      {
-                        title : "학습 관리",
-                        page  : "class"
-                      },
-                      {
-                        title : "시간표",
-                        page  : "time"
-                      }
-                    ]}
+                    {
+                      title : "강좌 목록",
+                      page  : "home",
+                      isSelected: this.props.block.substring(3,this.props.block.length) === "home"
+                    },
+                    {
+                      title : "강좌 개설",
+                      page  : "openclass",
+                      isSelected: this.props.block.substring(3,this.props.block.length) === "openclass"
+                    },
+                    {
+                      title : "학습 목차",
+                      page  : "class",
+                      isSelected: this.props.block.substring(3,this.props.block.length) === "class"
+                    },
+                    {
+                      title : "시간표",
+                      page  : "time",
+                      isSelected: this.props.block.substring(3,this.props.block.length) === "time"
+                    }
+                  ]}
                 />
                 </div>
                 <div className = "home_bottom">

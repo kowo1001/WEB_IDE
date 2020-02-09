@@ -56,7 +56,7 @@ function CreateClassTable(props) {
                 <th width = "5%">분반</th>
                 <th width = "5%">학점</th>
                 <th width = "10%">강의계획서</th>
-                <th width = "6%">강좌 신청</th>
+                <th width = "6%">비고</th>
             </tr>
         </thead>
         <tbody>
@@ -112,7 +112,7 @@ export default class CreateClass extends Component {
                 <div className = "opened_classs mr-top-small">
                     <h2><i class = "icon"> <MdSpeakerNotes /></i>강좌 인스턴스 생성</h2>
                     <CreateClassTable 
-                            btnName = "최소"
+                            btnName = "취소"
                             btnClass = "btn_refuse"
                         />
                 </div>

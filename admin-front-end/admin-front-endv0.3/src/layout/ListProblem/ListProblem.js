@@ -99,7 +99,7 @@ export default class ListProblem extends Component {
                 <h2 className = "u-text-center">문제 리스트</h2>
                     <div className = "headding">
                            <SelectSearch />
-                            <Link className = "btn_write u-mr-bottom-small" to = "listproblem?p=createproblem" ><i className = "icon"><FaEdit/></i>문제 작정</Link>
+                            <Link className = "btn_write u-mr-bottom-small" to = "listproblem?p=createproblem" ><i className = "icon"><FaEdit/></i>문제 작성</Link>
                     </div>
                 	<table className="table table-contribution" border = "1">
 					<thead>

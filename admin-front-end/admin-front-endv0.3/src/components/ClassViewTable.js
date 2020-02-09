@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import { GoFilePdf } from "react-icons/go";
 import { Link } from 'react-router-dom';
 export default class ClassViewTable extends Component {
+   /*  constructor(props){
+        super(props);
+        console.log(props.test);
+    } */
+    handleItem= (event) => {
+        event.preventDefault();
+        this.props.eventItemClick();            
+    }
     render() {
         return (
             <table class="table table-contribution" border = "1">
@@ -18,7 +26,7 @@ export default class ClassViewTable extends Component {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><Link onClick = {()=> this.ViewNotice()} to = "#" >강좌 계확서 올렸습니다</Link></td>
+                        <td><Link onClick = {(event)=> this.handleItem(event)} to = "#" >강좌 계확서 올렸습니다</Link></td>
                         <td><Link>syllabus.pdf<GoFilePdf/></Link></td>
                         <td>홍길동</td>
                         <td>2020-03-23</td>
@@ -26,7 +34,7 @@ export default class ClassViewTable extends Component {
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><Link onClick = {()=> this.ViewNotice()} to = "#" >강좌 계확서 올렸습니다</Link></td>
+                        <td><Link onClick = {(event)=> this.handleItem(event)} to = "#" >강좌 계확서 올렸습니다</Link></td>
                         <td><Link>syllabus.pdf<GoFilePdf/></Link></td>
                         <td>홍길동</td>
                         <td>2020-03-23</td>
@@ -34,7 +42,7 @@ export default class ClassViewTable extends Component {
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><Link onClick = {()=> this.ViewNotice()} to = "#">강좌 계확서 올렸습니다</Link></td>
+                        <td><Link onClick = {(event)=> this.handleItem(event)} to = "#">강좌 계확서 올렸습니다</Link></td>
                         <td><Link>syllabus.pdf<GoFilePdf/></Link></td>
                         <td>홍길동</td>
                         <td>2020-03-23</td>
@@ -42,7 +50,7 @@ export default class ClassViewTable extends Component {
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td><Link onClick = {()=> this.ViewNotice()} to = "#">강좌 계확서 올렸습니다</Link></td>
+                        <td><Link onClick = {(event)=> this.handleItem(event)} to = "#">강좌 계확서 올렸습니다</Link></td>
                         <td><Link>syllabus.pdf<GoFilePdf/></Link></td>
                         <td>홍길동</td>
                         <td>2020-03-23</td>

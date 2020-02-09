@@ -13,7 +13,7 @@ class Homework extends Component {
        <div className = "homework border-1">
             <div className = "homework_title border-btm">
                 <div className = "title ">
-                    <b>[일반과제] 개밸연구 보고서 [진행]</b>
+                    <b>[일반과제] 개발연구 보고서 [진행]</b>
                     <div className = "tasks">
                         <ul className = "ul-nolist-inline">
                             <li><Link to = "class?p=createhomework" className = "btn btn_classtask">수정</Link></li>

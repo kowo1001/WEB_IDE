@@ -39,7 +39,7 @@ export default class Index extends Component {
                <ul className = "ul-nolist-inline">
                     <li><Link to = "/index?p=login">로그인</Link></li>
                     <li><Link to = "/index?p=register">회원가입</Link></li>
-                    <li><Link to = "/index?p=language">Language(언어)</Link></li>
+                    <li><Link to = "/index?p=contribution">Contribution</Link></li>
                 </ul>
             </div>
             <div className = "main_bottom"> 
@@ -49,9 +49,7 @@ export default class Index extends Component {
                             <span>DGU Programming</span>
                         </div>
                             <h2>온라인 환경에서 개발하세요.</h2>
-                            <h3>DGU IDE는 설치가 필요없는 클라우드 통합 개발환경으로 팀의 개발 효율성을 극대화하는데 도움을 줍니다.</h3>
                         <div className = "contribution-box u-mr-top-small">
-                            <Link to = "/index?p=contribution" className = "btn btn_contribution">CONTRIBUTION</Link>
                         </div>
                 </div>
                 <div className="col span-1-of-2 main_bottom-right">

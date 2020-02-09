@@ -80,7 +80,8 @@ class Class extends Component {
 					<div className = "col span-1-of-5">
 						<div className = "left-box">
 							<ClassTasks
-							tasks = {['공지 사항','학습 목차', '과제 관리', '수강생 관리']}
+              tasks = {['학습 목차','학습 관리', '수강생 관리']}
+              /* tasks = {['공지 사항','학습 목차', '과제 관리', '수강생 관리']} */
 							/>
 						</div>
 					</div>

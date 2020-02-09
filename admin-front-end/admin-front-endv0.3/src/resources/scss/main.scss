@@ -3,10 +3,11 @@
 @import './Base/utilities';
 @import './Base/base';
 @import './Base/typhography';
+@import './Base/animations';
 
 @import './Pages/main';
-@import './Components/button';
-@import './Components/table';
+@import './Pages/listproblem';
+@import './Pages/projectManage';
 @import './Layout/header';
 @import './Layout/profile';
 @import './Pages/home';
@@ -18,7 +19,6 @@
 @import './Components/submission';
 @import './Components/select';
 @import './Components/seachBox';
-@import './Pages/listproblem';
-@import './Pages/projectManage';
-@import './Base/animations';
+@import './Components/button';
+@import './Components/table';
 @import './Components/formwriteclass';

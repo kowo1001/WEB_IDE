@@ -19,7 +19,7 @@ class MyListCoures extends Component {
         },
         {
             id : 3,
-            name : '자료구죠_03',
+            name : '자료구조_03',
             unit : 'CSE1011',
             professor : '김가영'
         },

@@ -71,7 +71,7 @@ class Header extends React.Component {
             <div className = "header__bottom">
                 <div className = "row">
                     <ul className = "header__bottom-nav ul-nolist-inline">
-                        <li><NavLink activeClassName = "nav-selected" to="/admin/class">학습 관리</NavLink></li>
+                        <li><NavLink activeClassName = "nav-selected" to="/admin/class?p=board">학습 관리</NavLink></li>
                         <li><NavLink activeClassName = "nav-selected" to="/admin/listproblem">문제 리스트</NavLink></li>
                         <li><NavLink activeClassName = "nav-selected" to="/admin/project">프로젝트 관리</NavLink></li>
                         <li><NavLink activeClassName = "nav-selected" exact to="/admin/home" >마이페이지</NavLink></li>

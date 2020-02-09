@@ -87,7 +87,7 @@ class ListRegister extends Component {
                                 <th width = "10%">이름</th>
                                 <th width = "10%">연락처</th>
                                 <th width = "15%">이메일</th>
-                                <th width = "15%">비고</th>
+                                <th width = "10%">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -102,8 +102,7 @@ class ListRegister extends Component {
                                                 <td>{item.number}</td>
                                                 <td>{item.email}</td>
                                                 <td className = "td-tasks">
-                                                    <Link className = "btn_permission">허락</Link>
-                                                    <Link className = "btn_refuse">거절</Link>
+                                                    <Link className = "btn_permission">승인</Link>
                                                 </td>
                                             </tr>
                                         ) 
@@ -123,7 +122,7 @@ class ListRegister extends Component {
                                 <th width = "10%">이름</th>
                                 <th width = "10%">연락처</th>
                                 <th width = "15%">이메일</th>
-                                <th width = "15%">비고</th>
+                                <th width = "10%">비고</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -138,7 +137,7 @@ class ListRegister extends Component {
                                         <td>{item.number}</td>
                                         <td>{item.email}</td>
                                         <td class = "td-tasks">
-                                            <Link className = "btn_refuse">삭제</Link>
+                                            <Link className = "btn_refuse">취소</Link>
                                         </td>
                                     </tr>
                                 ) 

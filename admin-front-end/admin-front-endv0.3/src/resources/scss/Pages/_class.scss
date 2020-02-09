@@ -1,5 +1,5 @@
 .class_instance{
-    height: auto;
+    height: 180vh;
     a{color: black};
     &-top{
         height: 5rem;
@@ -8,11 +8,12 @@
         .my_class-list{
             select{
                 height: 5rem;
-                width: 22.3rem;
+                width: 28.3rem;
                 border-color: #ccc;
                 margin-top: -12px;
                 position: absolute;
                 font-size: 2rem;
+                text-align-last:center;
             }
         }
     }
@@ -44,9 +45,7 @@
                 height: 40vh;
             }
             .class_board{
-                
                /*공지 사항 페이지*/
-                
             }
             .class_homeworks{
                 .list_homework{

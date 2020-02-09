@@ -98,14 +98,14 @@ export default class RegisterClass extends Component {
                 <div className = "waiting_class">
                     <h2><i class = "icon"> <MdSpeakerNotes />&nbsp;</i>강좌 신청</h2>
                         <RegisterClassTable 
-                            btnName = "등록"
+                            btnName = "신청"
                             btnClass = "btn_permission"
                         />
                 </div>
                 <div className = "done_class">
                     <h2><i class = "icon"> <MdSpeakerNotes />&nbsp;</i>신청 목록</h2>
                     <RegisterClassTable 
-                            btnName = "최소"
+                            btnName = "취소"
                             btnClass = "btn_refuse"
                     />
                 </div>

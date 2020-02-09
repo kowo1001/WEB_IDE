@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-
+import classname from 'classname';
 
 const HomeOption = (props) => {
     return (
       <ul className = "ul-nolist-inline">
       {
-         props.headerText.map((item,index) => 
-          <li><NavLink activeClassName="nav-selected-body" exact to = {`/admin/home?p=${item.page}`}>{item.title}</NavLink></li>
+          props.headerText.map((item,index) => 
+          <li key={`li-${index}`} className={classname({ 'select-home': item.isSelected })}><NavLink  exact to = {`/admin/home?p=${item.page}`}>{item.title}</NavLink></li>
         )
       }
     </ul>

@@ -3,10 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { GoFilePdf } from "react-icons/go";
 export default class ClassViewItem extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
-
     render() {
         return (
             <div className = "form_itemview">

@@ -43,7 +43,6 @@ class CreateHomework extends Component {
 
                         <div className = "homework-content">
                             <b>내용 :</b>
-                            <button id = "btn-editor" onClick = {(e) => this.toggleChange(e)}className = "btn btn_permission"> + Editor</button>
                             <div className = "row">
                                 <div class="col span-1-of-2 cke-editor" style = {width}>
                                     <CKEditor

@@ -58,15 +58,12 @@
     background-color: $color-brown;
     color: white !important;
 }
-
-.nav-bar ul li.select > .nav-selected-body {
-    color: black;
+.select-home{
+    background-color: $color-brown;
+    a{
+        color: white !important;
+    }
 }
-.nav-bar ul li a.nav-selected-body{
-    background-color: $color-orange;
-    color: white;
-}
-
 .nav-selected-class{
     background-color: $color-dark;
  }
