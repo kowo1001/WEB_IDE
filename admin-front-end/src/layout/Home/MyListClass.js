@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { TiArrowRightThick } from 'react-icons/ti';
+import axios from 'axios';
 
 class MyListCoures extends Component {
+  state = {
+    myRegisterClass: []
+  }
+  async componentDidMount() {
+    try {
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/lectures`);
+      this.setState({ myRegisterClass: data });
+    } catch(e) {
+      alert("오류!");
+    }
+  }
+
+  //array MAP
   render(){ 
-    var myRegisterClass = [
-        {
-            id : 1,
-            name : '심화프로그래밍_01',
-            unit : 'CSE1012',
-            professor : '김가영'
-        },
-        {
-            id : 2,
-            name : '기초프로그래밍_02',
-            unit : 'CSE1013',
-            professor : '김가영'
-        },
-        {
-            id : 3,
-            name : '자료구조_03',
-            unit : 'CSE1011',
-            professor : '김가영'
-        },
-        {
-            id : 4,
-            name : '웹프로그래밍_03',
-            unit : 'CSE1010',
-            professor : '김가영'
-        },
-    ]
     return(
         <table border="1" className="table table-contribution">
             <thead>
@@ -42,11 +30,11 @@ class MyListCoures extends Component {
             </thead>
             <tbody>
             {
-                myRegisterClass.map((item,index) => (
+                this.state.myRegisterClass.map((item,index) => (
                     <tr key = {index}>
                         <td>{item.id}</td>
-                        <td>{item.unit}</td>
-                        <td><Link to = {`/admin/class?p=${item.name}`} >{item.name}<TiArrowRightThick /></Link></td>
+                        <td>{item.title}</td>
+                        <td><Link to = {`/admin/class?p=${item.name}`} >{item.class_name}<TiArrowRightThick /></Link></td>
                         <td>{item.professor}</td>
                     </tr>
                 ))  

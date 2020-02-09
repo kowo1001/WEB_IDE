@@ -1,35 +1,45 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link, Redirect } from 'react-router-dom'
+import axios from "axios"
 
 export default class Login extends Component {
     constructor(props)
     {
         super(props);
         this.state = {
-            isAccount : false
+            isAccount : false,
+            email: "", password: ""
         }
     }
-    email;
-    password
+    
     input = (event) => {
-        var name = event.target.name;
-        var value = event.target.value;
-        if(name == "email"){
-            this.email = value;
-        }else{
-            this.password = value;
-        }
+        const { name, value } = event.target;
+        const state = {}; state[name] = value;
+        this.setState(state)
     }
+    
     checkAccount = (event) => {
         event.preventDefault();
-        if(this.email == "admin" && this.password == "test")
+
+        if(this.state.email == "admin" && this.state.password == "test")
         {
             this.setState({
                 isAccount : !this.state.isAccount
             })
         }
     }
+    
+    async submitHandler(event) {
+        const { email, password } = this.state;
+        try {
+            await axios.post(`${process.env.REACT_APP_API_URL}/login`, { email, password });
+            // get 
+        } catch(e) {
+            console.log(e);
+            alert("서버 통신 오류!")
+        }
+    }
+
     render() {
         if(this.state.isAccount)
          {
@@ -37,7 +47,7 @@ export default class Login extends Component {
          }
             return (
                 <div className = "login-form">
-                    <form action="" method="POST" role="form">
+                    <form>
                         <legend><h2>로그인</h2></legend><br/>
                         <br/><br/>
                         <div className="form-group">
@@ -53,7 +63,7 @@ export default class Login extends Component {
                                 <span className="focus-input100-2"></span>
                             </div>
                         </div><br/><br/>
-                        <button type="submit" onClick = {(event) => (this.checkAccount(event))} className="btn-login btn-shadow">로그인</button> 
+                        <button type="button" onClick = {(event) => (this.submitHandler(event))} className="btn-login btn-shadow">로그인</button> 
                     </form>
                     <div>
                         <ul>
